@@ -12,7 +12,7 @@ class PostController extends Controller
 {
     public function index()
     {
-        $data = Post::all();
+        $data = Post::paginate(5);
         return new PostCollection($data);
     }
 
